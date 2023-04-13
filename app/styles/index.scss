@@ -1,5 +1,166 @@
 @import url(../vendor/normalize.css);
-$font-color: #F7C334;
-html {
-    color: $font-color;
+@import url(../vendor/fonts.css);
+
+$color-white: #FFFFFF;
+$color-yellow: #F7C334;
+$color-black: #2F2A2A;
+$color-grey: #c4c4c4;
+$font-montserrat: "Montserrat", "Arial", sans-serif;
+$font-open-sans: "Open-Sans", "Arial", sans-serif;
+$font-tinos: "Tinos", "Arial", sans-serif;
+
+.html {
+    box-sizing: border-box;
+    height: 100%;
 }
+
+.root {
+    height: 100%;
+}
+
+.page {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.header{
+    &__inner {
+        background-color: $color-black;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 50px;
+        align-items: center;
+    }
+
+    &__menu-list {
+        display: flex;
+        gap: 38px;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+
+    &__menu-list-link {
+        text-decoration: none;
+        color: $color-yellow;
+        text-transform: uppercase;
+        font: 100% $font-montserrat;
+        font-weight: 700;
+    }
+
+    &__order {
+        display: flex;
+        align-items: center;
+        gap: 19px;
+    }
+
+    &__order-trash {
+        width: 16px;
+        height: 15px;
+        background-color: $color-black;
+        padding: 0;
+        border: none;
+        cursor: pointer;
+    }
+
+    &__contact-us {
+        border-left: 1px solid $color-yellow;
+        max-width: 122px;
+        padding-left: 9px;
+    }
+
+    &__phone {
+        display: flex;
+        gap: 9px;
+    }
+
+    &__phone-number {
+        color: $color-yellow;
+        margin: 0;
+        font: 100% $font-open-sans;
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 14px;
+    }
+
+    &__contact-text {
+        color: $color-yellow;
+        margin: 0; 
+        font: 100% $font-open-sans;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 14px;
+    }
+
+    &__button-order {
+        max-width: 134px;
+        border-radius: 120px;
+        color: $color-white;
+        background-color: $color-yellow;
+        font: 100% $font-open-sans;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 19px;
+        height: 36px;
+        cursor: pointer;
+        border: none;
+        text-transform: uppercase;
+    }
+}
+
+.top {
+    display: flex;
+    background-image: url(../images/top__background.jpg);
+    background-repeat: no-repeat;
+    min-height: 960px;
+
+    &__wrapper-text {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 0 207px;
+        justify-content: center;
+    }
+
+    &__subtitle {
+        font: 100% $font-tinos;
+        text-align: center;
+        font-weight: 400;
+        font-size: 57px;
+        line-height: 66px;
+        margin: 0;
+        color: $color-yellow;
+    }
+
+    &__title {
+        font: 100% $font-tinos;
+        text-align: center;
+        font-weight: 400;
+        font-size: 90px;
+        line-height: 103px;
+        margin: 0;
+        color: $color-yellow;
+    }
+
+    &__title-descrition {
+        text-transform: uppercase;
+        color: $color-white;
+        font: 100% $font-open-sans;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+        text-align: center;
+        margin: 27px 0 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 17px;
+    }
+
+    &__text-line {
+        height: 2px;
+        width: 62px;
+        background-color: $color-grey;
+    }
+}
+
+

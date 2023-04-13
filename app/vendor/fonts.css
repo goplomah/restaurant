@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url(./fonts/Montserrat/Montserrat-Bold.woff2) format("woff2"),
+      url(./fonts/Montserrat/Montserrat-Bold.woff) format("woff"),
+      url(./fonts/Montserrat/Montserrat-Bold.ttf) format("truetype");
+    font-weight: 700;
+  }
+  
+  @font-face {
+    font-family: "Open-Sans";
+    src: url(./fonts/Open-sans/OpenSans-Bold.woff2) format("woff2"),
+      url(./fonts/Open-sans/OpenSans-Bold.woff) format("woff"),
+      url(./fonts/Open-sans/OpenSans-Bold.ttf) format("truetype");
+    font-weight: 700;
+  }
+
+  @font-face {
+    font-family: "Open-Sans";
+    src: url(./fonts/Open-sans/OpenSans-Regular.woff2) format("woff2"),
+      url(./fonts/Open-sans/OpenSans-Regular.woff) format("woff"),
+      url(./fonts/Open-sans/OpenSans-Regular.ttf) format("truetype");
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: "Tinos";
+    src: url(./fonts/Tinos/Tinos-Regular.woff2) format("woff2"),
+      url(./fonts/Tinos/Tinos-Regular.woff) format("woff"),
+      url(./fonts/Tinos/Tinos-Regular.ttf) format("truetype");
+    font-weight: 400;
+  }

@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// const CopyPlugin = require("copy-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -47,14 +47,14 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './app/index.html',
-      // favicon: './app/images/favicons/faviconka.ico',
+      favicon: './app/images/favicon/faviconka.ico',
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(), 
-    // new CopyPlugin({
-    //   patterns: [
-    //     {from: './app/images/favicons/faviconka.ico'},
-    //   ],
-    // }),
+    new CopyPlugin({
+      patterns: [
+        {from: './app/images/favicon/faviconka.ico'},
+      ],
+    }),
   ]
 }
