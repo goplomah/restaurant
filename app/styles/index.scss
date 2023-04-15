@@ -9,6 +9,12 @@ $font-montserrat: "Montserrat", "Arial", sans-serif;
 $font-open-sans: "Open-Sans", "Arial", sans-serif;
 $font-tinos: "Tinos", "Arial", sans-serif;
 
+%ul-properties {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
 .html {
     box-sizing: border-box;
     height: 100%;
@@ -21,6 +27,7 @@ $font-tinos: "Tinos", "Arial", sans-serif;
 .page {
     max-width: 1280px;
     margin: 0 auto;
+    background-color: $color-black;
 }
 
 .header{
@@ -163,4 +170,59 @@ $font-tinos: "Tinos", "Arial", sans-serif;
     }
 }
 
+.container {
+    max-width: 1110px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
 
+.intro {
+    margin: -130px;
+
+    &__cards-items {
+        display: flex;
+        gap: 32px;
+        @extend %ul-properties;
+    }
+
+    &__card-item {
+        width: 349px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #353030;
+        padding: 48px 20px 54px;
+    }
+
+    &__card-img {
+        width: 87px;
+        height: 87px;
+    }
+
+    &__card-title {
+        font: 100% $font-tinos;
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 30px;
+        color: $color-white;
+        margin: 4px 0 0;
+    }
+
+    &__card-title_type_yellow {
+        font: 100% $font-tinos;
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 30px;
+        color: $color-yellow;
+    }
+
+    &__card-text {
+        font: 100% $font-tinos;
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 30px;
+        color: $color-white;
+        margin: 20px 0 0;
+        text-align: center;
+    }
+}
