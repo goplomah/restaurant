@@ -171,17 +171,18 @@ $font-tinos: "Tinos", "Arial", sans-serif;
 }
 
 .container {
-    max-width: 1110px;
+    max-width: 1150px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 20px;
 }
 
 .intro {
-    margin: -130px;
+    margin: -130px 0 0;
+    box-sizing: border-box;
 
     &__cards-items {
         display: flex;
-        gap: 32px;
+        gap: 31px;
         @extend %ul-properties;
     }
 
@@ -224,5 +225,78 @@ $font-tinos: "Tinos", "Arial", sans-serif;
         color: $color-white;
         margin: 20px 0 0;
         text-align: center;
+    }
+}
+
+.our-story {
+    padding: 36px 0 122px;
+    
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__text-wrapper {
+        max-width: 444px;
+    }
+
+    &__title {
+        font: 100% $font-tinos;
+        font-weight: 400;
+        font-size: 54px;
+        line-height: 62px;
+        color: $color-white;
+        margin: 15px 0 0;
+        text-align: center;
+    }
+
+    &__title_type_yellow {
+        font: 100% $font-tinos;
+        font-weight: 400;
+        font-size: 54px;
+        line-height: 62px;
+        color: $color-yellow;
+    }
+
+    &__text {
+        margin: 21px 0 0;
+        font: 100% $font-open-sans;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+        color: $color-white;
+    }
+
+    &__counter-food {
+        @extend %ul-properties;
+        margin-top: 39px;
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    &__counter-number {
+        color: $color-yellow;
+        font: 100% $font-open-sans;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 55px;
+        margin: 0;
+    }
+
+    &__counret-text {
+        color: $color-white;
+        font: 100% $font-open-sans;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 28px;
+        margin: 2px 0 0;
+    }
+
+    &__image {
+        display: block;
+        max-width: 539px;
+        width: 100%;
     }
 }
