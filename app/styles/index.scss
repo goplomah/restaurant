@@ -25,7 +25,7 @@ $font-tinos: "Tinos", "Arial", sans-serif;
 }
 
 .page {
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
     background-color: $color-black;
 }
@@ -298,5 +298,53 @@ $font-tinos: "Tinos", "Arial", sans-serif;
         display: block;
         max-width: 539px;
         width: 100%;
+    }
+}
+
+.order {
+    background-image: url(../images/order__background.jpg);
+    min-height: 100%;
+    padding: 80px 0 104px;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__wrapper-text {
+        max-width: 610px;
+    }
+
+    &__title {
+        font: 100% $font-tinos;
+        font-weight: 400;
+        font-size: 52px;
+        line-height: 60px;
+        color: $color-yellow;
+        margin: 0;
+    }
+
+    &__text {
+        margin: 20px 0 0;
+        font: 100% $font-open-sans;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 33px;
+        color: $color-white;
+    }
+
+    &__btn {
+        background-color: $color-yellow;
+        max-width: 141px;
+        height: 36px;
+        color: $color-white;
+        border-radius: 120px;
+        text-transform: uppercase;
+        font: 100% $font-open-sans;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 19px;
+        cursor: pointer;
     }
 }
