@@ -1,350 +1,431 @@
 @import url(../vendor/normalize.css);
 @import url(../vendor/fonts.css);
 
-$color-white: #FFFFFF;
-$color-yellow: #F7C334;
-$color-black: #2F2A2A;
+$color-white: #ffffff;
+$color-yellow: #f7c334;
+$color-black: #2f2a2a;
 $color-grey: #c4c4c4;
 $font-montserrat: "Montserrat", "Arial", sans-serif;
 $font-open-sans: "Open-Sans", "Arial", sans-serif;
 $font-tinos: "Tinos", "Arial", sans-serif;
 
 %ul-properties {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .html {
-    box-sizing: border-box;
-    height: 100%;
+  box-sizing: border-box;
+  height: 100%;
 }
 
 .root {
-    height: 100%;
+  height: 100%;
 }
 
 .page {
-    max-width: 1440px;
-    margin: 0 auto;
-    background-color: $color-black;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: $color-black;
 }
 
-.header{
-    &__inner {
-        background-color: $color-black;
-        display: flex;
-        justify-content: space-between;
-        padding: 0 50px;
-        align-items: center;
-    }
+.header {
+  &__inner {
+    background-color: $color-black;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    align-items: center;
+  }
 
-    &__menu-list {
-        display: flex;
-        gap: 38px;
-        padding: 0;
-        margin: 0;
-        list-style-type: none;
-    }
+  &__menu-list {
+    display: flex;
+    gap: 38px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
 
-    &__menu-list-link {
-        text-decoration: none;
-        color: $color-yellow;
-        text-transform: uppercase;
-        font: 100% $font-montserrat;
-        font-weight: 700;
-    }
+  &__menu-list-link {
+    text-decoration: none;
+    color: $color-yellow;
+    text-transform: uppercase;
+    font: 100% $font-montserrat;
+    font-weight: 700;
+  }
 
-    &__order {
-        display: flex;
-        align-items: center;
-        gap: 19px;
-    }
+  &__order {
+    display: flex;
+    align-items: center;
+    gap: 19px;
+  }
 
-    &__order-trash {
-        width: 16px;
-        height: 15px;
-        background-color: $color-black;
-        padding: 0;
-        border: none;
-        cursor: pointer;
-    }
+  &__order-trash {
+    width: 16px;
+    height: 15px;
+    background-color: $color-black;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+  }
 
-    &__contact-us {
-        border-left: 1px solid $color-yellow;
-        max-width: 122px;
-        padding-left: 9px;
-    }
+  &__contact-us {
+    border-left: 1px solid $color-yellow;
+    max-width: 122px;
+    padding-left: 9px;
+  }
 
-    &__phone {
-        display: flex;
-        gap: 9px;
-    }
+  &__phone {
+    display: flex;
+    gap: 9px;
+  }
 
-    &__phone-number {
-        color: $color-yellow;
-        margin: 0;
-        font: 100% $font-open-sans;
-        font-weight: 700;
-        font-size: 10px;
-        line-height: 14px;
-    }
+  &__phone-number {
+    color: $color-yellow;
+    margin: 0;
+    font: 100% $font-open-sans;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 14px;
+  }
 
-    &__contact-text {
-        color: $color-yellow;
-        margin: 0; 
-        font: 100% $font-open-sans;
-        font-weight: 400;
-        font-size: 10px;
-        line-height: 14px;
-    }
+  &__contact-text {
+    color: $color-yellow;
+    margin: 0;
+    font: 100% $font-open-sans;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+  }
 
-    &__button-order {
-        max-width: 134px;
-        border-radius: 120px;
-        color: $color-white;
-        background-color: $color-yellow;
-        font: 100% $font-open-sans;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 19px;
-        height: 36px;
-        cursor: pointer;
-        border: none;
-        text-transform: uppercase;
-    }
+  &__button-order {
+    max-width: 134px;
+    border-radius: 120px;
+    color: $color-white;
+    background-color: $color-yellow;
+    font: 100% $font-open-sans;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    height: 36px;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+  }
 }
 
 .top {
+  display: flex;
+  background-image: url(../images/top__background.jpg);
+  background-repeat: no-repeat;
+  min-height: 960px;
+
+  &__wrapper-text {
     display: flex;
-    background-image: url(../images/top__background.jpg);
-    background-repeat: no-repeat;
-    min-height: 960px;
+    flex-direction: column;
+    margin: 0 0 0 207px;
+    justify-content: center;
+  }
 
-    &__wrapper-text {
-        display: flex;
-        flex-direction: column;
-        margin: 0 0 0 207px;
-        justify-content: center;
-    }
+  &__subtitle {
+    font: 100% $font-tinos;
+    text-align: center;
+    font-weight: 400;
+    font-size: 57px;
+    line-height: 66px;
+    margin: 0;
+    color: $color-yellow;
+  }
 
-    &__subtitle {
-        font: 100% $font-tinos;
-        text-align: center;
-        font-weight: 400;
-        font-size: 57px;
-        line-height: 66px;
-        margin: 0;
-        color: $color-yellow;
-    }
+  &__title {
+    font: 100% $font-tinos;
+    text-align: center;
+    font-weight: 400;
+    font-size: 90px;
+    line-height: 103px;
+    margin: 0;
+    color: $color-yellow;
+  }
 
-    &__title {
-        font: 100% $font-tinos;
-        text-align: center;
-        font-weight: 400;
-        font-size: 90px;
-        line-height: 103px;
-        margin: 0;
-        color: $color-yellow;
-    }
+  &__title-descrition {
+    text-transform: uppercase;
+    color: $color-white;
+    font: 100% $font-open-sans;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+    margin: 27px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 17px;
+  }
 
-    &__title-descrition {
-        text-transform: uppercase;
-        color: $color-white;
-        font: 100% $font-open-sans;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 25px;
-        text-align: center;
-        margin: 27px 0 0 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 17px;
-    }
-
-    &__text-line {
-        height: 2px;
-        width: 62px;
-        background-color: $color-grey;
-    }
+  &__text-line {
+    height: 2px;
+    width: 62px;
+    background-color: $color-grey;
+  }
 }
 
 .container {
-    max-width: 1150px;
-    margin: 0 auto;
-    padding: 0 20px;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .intro {
-    margin: -130px 0 0;
-    box-sizing: border-box;
+  margin: -130px 0 0;
+  box-sizing: border-box;
 
-    &__cards-items {
-        display: flex;
-        gap: 31px;
-        @extend %ul-properties;
-    }
+  &__cards-items {
+    display: flex;
+    gap: 31px;
+    @extend %ul-properties;
+  }
 
-    &__card-item {
-        width: 349px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #353030;
-        padding: 48px 20px 54px;
-    }
+  &__card-item {
+    width: 349px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #353030;
+    padding: 48px 20px 54px;
+  }
 
-    &__card-img {
-        width: 87px;
-        height: 87px;
-    }
+  &__card-img {
+    width: 87px;
+    height: 87px;
+  }
 
-    &__card-title {
-        font: 100% $font-tinos;
-        font-weight: 400;
-        font-size: 26px;
-        line-height: 30px;
-        color: $color-white;
-        margin: 4px 0 0;
-    }
+  &__card-title {
+    font: 100% $font-tinos;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 30px;
+    color: $color-white;
+    margin: 4px 0 0;
+  }
 
-    &__card-title_type_yellow {
-        font: 100% $font-tinos;
-        font-weight: 400;
-        font-size: 26px;
-        line-height: 30px;
-        color: $color-yellow;
-    }
+  &__card-title_type_yellow {
+    font: 100% $font-tinos;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 30px;
+    color: $color-yellow;
+  }
 
-    &__card-text {
-        font: 100% $font-tinos;
-        font-weight: 400;
-        font-size: 26px;
-        line-height: 30px;
-        color: $color-white;
-        margin: 20px 0 0;
-        text-align: center;
-    }
+  &__card-text {
+    font: 100% $font-tinos;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 30px;
+    color: $color-white;
+    margin: 20px 0 0;
+    text-align: center;
+  }
 }
 
 .our-story {
-    padding: 36px 0 122px;
-    
-    &__wrapper {
-        display: flex;
-        justify-content: space-between;
-    }
+  padding: 36px 0 122px;
 
-    &__text-wrapper {
-        max-width: 444px;
-    }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
 
-    &__title {
-        font: 100% $font-tinos;
-        font-weight: 400;
-        font-size: 54px;
-        line-height: 62px;
-        color: $color-white;
-        margin: 15px 0 0;
-        text-align: center;
-    }
+  &__text-wrapper {
+    max-width: 444px;
+  }
 
-    &__title_type_yellow {
-        font: 100% $font-tinos;
-        font-weight: 400;
-        font-size: 54px;
-        line-height: 62px;
-        color: $color-yellow;
-    }
+  &__title {
+    font: 100% $font-tinos;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 62px;
+    color: $color-white;
+    margin: 15px 0 0;
+    text-align: center;
+  }
 
-    &__text {
-        margin: 21px 0 0;
-        font: 100% $font-open-sans;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 22px;
-        text-align: center;
-        color: $color-white;
-    }
+  &__title_type_yellow {
+    font: 100% $font-tinos;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 62px;
+    color: $color-yellow;
+  }
 
-    &__counter-food {
-        @extend %ul-properties;
-        margin-top: 39px;
-        display: flex;
-        gap: 30px;
-        justify-content: center;
-    }
+  &__text {
+    margin: 21px 0 0;
+    font: 100% $font-open-sans;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: $color-white;
+  }
 
-    &__counter-number {
-        color: $color-yellow;
-        font: 100% $font-open-sans;
-        font-weight: 400;
-        font-size: 40px;
-        line-height: 55px;
-        margin: 0;
-    }
+  &__counter-food {
+    @extend %ul-properties;
+    margin-top: 39px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+  }
 
-    &__counret-text {
-        color: $color-white;
-        font: 100% $font-open-sans;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 28px;
-        margin: 2px 0 0;
-    }
+  &__counter-number {
+    color: $color-yellow;
+    font: 100% $font-open-sans;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 55px;
+    margin: 0;
+  }
 
-    &__image {
-        display: block;
-        max-width: 539px;
-        width: 100%;
-    }
+  &__counret-text {
+    color: $color-white;
+    font: 100% $font-open-sans;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    margin: 2px 0 0;
+  }
+
+  &__image {
+    display: block;
+    max-width: 539px;
+    width: 100%;
+  }
 }
 
 .order {
-    background-image: url(../images/order__background.jpg);
-    min-height: 100%;
-    padding: 80px 0 104px;
+  background-image: url(../images/order__background.jpg);
+  min-height: 100%;
+  padding: 80px 0 104px;
 
-    &__wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    &__wrapper-text {
-        max-width: 610px;
-    }
+  &__wrapper-text {
+    max-width: 610px;
+  }
 
-    &__title {
-        font: 100% $font-tinos;
-        font-weight: 400;
-        font-size: 52px;
-        line-height: 60px;
-        color: $color-yellow;
-        margin: 0;
-    }
+  &__title {
+    font: 100% $font-tinos;
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 60px;
+    color: $color-yellow;
+    margin: 0;
+  }
 
-    &__text {
-        margin: 20px 0 0;
-        font: 100% $font-open-sans;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 33px;
-        color: $color-white;
-    }
+  &__text {
+    margin: 20px 0 0;
+    font: 100% $font-open-sans;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    color: $color-white;
+  }
 
-    &__btn {
-        background-color: $color-yellow;
-        max-width: 141px;
-        height: 36px;
-        color: $color-white;
-        border-radius: 120px;
-        text-transform: uppercase;
-        font: 100% $font-open-sans;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 19px;
-        cursor: pointer;
-    }
+  &__btn {
+    background-color: $color-yellow;
+    max-width: 141px;
+    height: 36px;
+    color: $color-white;
+    border-radius: 120px;
+    text-transform: uppercase;
+    font: 100% $font-open-sans;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    cursor: pointer;
+  }
+}
+
+.dishes {
+  background-image: url(../images/dishes__background.png);
+  padding: 88px 0 96px;
+
+  &__title {
+    font: 100% $font-tinos;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 62px;
+    color: $color-yellow;
+    text-align: center;
+    margin: 0;
+  }
+
+  &__wrapper {
+    margin: 70px 0 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__images {
+    max-width: 553px;
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+      "img1 img1"
+      "img2 img4"
+      "img3 img4";
+  }
+
+  &__image1 {
+    grid-area: img1;
+  }
+
+  &__image2 {
+    grid-area: img2;
+  }
+
+  &__image3 {
+    grid-area: img3;
+  }
+
+  &__image4 {
+    grid-area: img4;
+  }
+
+  &__cards {
+    @extend %ul-properties;
+    max-width: 451px;
+    gap: 51px;
+  }
+
+  &__card {
+    background-color: #3c3636;
+    border-radius: 50px 0;
+    position: relative;
+  }
+
+  &__card-img {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+
+  &__card-title {
+    font: 100% $font-tinos;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: $color-yellow;
+  }
+
+  &__card_text {
+    font: 100% $font-tinos;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    color: $color-white;
+  }
 }
