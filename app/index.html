@@ -171,10 +171,53 @@
                                 <p class="dishes__card_text">Наивкуснейшая яичница с солёными огурцами на завтрак</p>
                             </li>
                         </ul>
-                        <button class="dishes__btn"></button>
+                        <button class="dishes__btn">ОСТАЛЬНОЕ МЕНЮ</button>
                     </div>
                 </div>
             </div>
+        </section>
+        <section class="slider">
+            <div class="container">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="visitor-card">
+                        <p class="visitor-card__text">Вид из ресторана потрясающий, интерьер необычный, еда отличная, обслуживание отличное, понравились закуски и десерт, утка с картошкой была восхитительна, все отлично дома в Мексике я не встречал таких отменных заведений, однозначно рекомендую. </p>
+                        <img src="<%=require('./images/visitor-card__foto1.jpg')%>" alt="" class="visitor-card__foto">
+                        <p class="visitor-card__status">Посетитель</p>
+                        <p class="visitor-card__name">Серхио</p>
+                      </div>
+                    </div>
+                      <div class="swiper-slide">
+                        <div class="visitor-card">
+                            <p class="visitor-card__text">Уютное место с прекрасным интерьером, вкусной едой и приятным музыкальным сопровождением!!! Хочется возвращаться снова и снова)))</p>
+                            <img src="<%=require('./images/visitor-card__foto2.jpg')%>" alt="" class="visitor-card__foto">
+                            <p class="visitor-card__status">Посетитель</p>
+                            <p class="visitor-card__name">Екатерина</p>
+                          </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="visitor-card">
+                            <p class="visitor-card__text">Первое посещение оставило приятное впечатление, стильное оформление, дружественная атмосфера, вкусные и качественные коктейли, понравились горячие блюда. Советую. </p>
+                            <img src="<%=require('./images/visitor-card__foto3.jpg')%>" alt="" class="visitor-card__foto">
+                            <p class="visitor-card__status">Посетитель</p>
+                            <p class="visitor-card__name">Лиза</p>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+        </section>
+        <section class="gallery">
+                <h2 class="gallery__title">Галерея <span class="gallery__title_type_yellow">Блюд</span></h2>
+            <div class="gallery__images">
+                <img src="<%=require('./images/gallery__item-1.jpg')%>" alt="котелок с супом." class="gallery__item-1 gallery__item">
+                <img src="<%=require('./images/gallery__item-2.jpg')%>" alt="спагетти с морепродуктамию" class="gallery__item-2 gallery__item">
+                <img src="<%=require('./images/gallery__item-3.jpg')%>" alt="овощное рагу." class="gallery__item-3 gallery__item">
+                <img src="<%=require('./images/gallery__item-4.jpg')%>" alt="чашка кофе." class="gallery__item-4 gallery__item">
+                <img src="<%=require('./images/gallery__item-5.jpg')%>" alt="пицца." class="gallery__item-5 gallery__item">
+                <img src="<%=require('./images/gallery__item-6.jpg')%>" alt="яичница." class="gallery__item-6 gallery__item">
+            </div> 
         </section>
     </main>
 </div>
