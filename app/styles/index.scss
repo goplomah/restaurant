@@ -22,6 +22,23 @@ $font-inter: "Inter", "Arial", sans-serif;
   transition: 1s ease-in-out;
 }
 
+%title-properties {
+  font: 100% $font-tinos;
+  font-size: 54px;
+  line-height: 62px;
+}
+
+%text-properties {
+  font: 100% $font-tinos;
+  font-size: 26px;
+  line-height: 30px;
+}
+
+%subtext-properties {
+  font-size: 20px;
+  line-height: 28px;
+}
+
 .html {
   box-sizing: border-box;
   height: 100%;
@@ -29,6 +46,13 @@ $font-inter: "Inter", "Arial", sans-serif;
 
 .root {
   height: 100%;
+  font: 100% $font-open-sans;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  color: $color-white;
+  line-height: 29px;
 }
 
 .page {
@@ -89,12 +113,17 @@ $font-inter: "Inter", "Arial", sans-serif;
   &__phone {
     display: flex;
     gap: 9px;
+    align-items: flex-start;
+  }
+
+  &__phone-img {
+    width: 21px;
+    height: 21px;
   }
 
   &__phone-number {
     color: $color-yellow;
     margin: 0;
-    font: 100% $font-open-sans;
     font-weight: 700;
     font-size: 10px;
     line-height: 14px;
@@ -103,8 +132,6 @@ $font-inter: "Inter", "Arial", sans-serif;
   &__contact-text {
     color: $color-yellow;
     margin: 0;
-    font: 100% $font-open-sans;
-    font-weight: 400;
     font-size: 10px;
     line-height: 14px;
   }
@@ -112,9 +139,7 @@ $font-inter: "Inter", "Arial", sans-serif;
   &__button-order {
     max-width: 134px;
     border-radius: 120px;
-    color: $color-white;
     background-color: $color-yellow;
-    font: 100% $font-open-sans;
     font-weight: 700;
     font-size: 14px;
     line-height: 19px;
@@ -145,7 +170,6 @@ $font-inter: "Inter", "Arial", sans-serif;
   &__subtitle {
     font: 100% $font-tinos;
     text-align: center;
-    font-weight: 400;
     font-size: 57px;
     line-height: 66px;
     margin: 0;
@@ -155,7 +179,6 @@ $font-inter: "Inter", "Arial", sans-serif;
   &__title {
     font: 100% $font-tinos;
     text-align: center;
-    font-weight: 400;
     font-size: 90px;
     line-height: 103px;
     margin: 0;
@@ -164,10 +187,6 @@ $font-inter: "Inter", "Arial", sans-serif;
 
   &__title-descrition {
     text-transform: uppercase;
-    color: $color-white;
-    font: 100% $font-open-sans;
-    font-weight: 400;
-    font-size: 16px;
     line-height: 25px;
     text-align: center;
     margin: 27px 0 0 0;
@@ -215,28 +234,17 @@ $font-inter: "Inter", "Arial", sans-serif;
   }
 
   &__card-title {
-    font: 100% $font-tinos;
-    font-weight: 400;
-    font-size: 26px;
-    line-height: 30px;
-    color: $color-white;
+    @extend %text-properties;
     margin: 4px 0 0;
   }
 
   &__card-title_type_yellow {
-    font: 100% $font-tinos;
-    font-weight: 400;
-    font-size: 26px;
-    line-height: 30px;
+    @extend %text-properties;
     color: $color-yellow;
   }
 
   &__card-text {
-    font: 100% $font-tinos;
-    font-weight: 400;
-    font-size: 26px;
-    line-height: 30px;
-    color: $color-white;
+    @extend %text-properties;
     margin: 20px 0 0;
     text-align: center;
   }
@@ -255,31 +263,20 @@ $font-inter: "Inter", "Arial", sans-serif;
   }
 
   &__title {
-    font: 100% $font-tinos;
-    font-weight: 400;
-    font-size: 54px;
-    line-height: 62px;
-    color: $color-white;
+    @extend %title-properties;
     margin: 15px 0 0;
     text-align: center;
   }
 
   &__title_type_yellow {
-    font: 100% $font-tinos;
-    font-weight: 400;
-    font-size: 54px;
-    line-height: 62px;
+    @extend %title-properties;
     color: $color-yellow;
   }
 
   &__text {
     margin: 21px 0 0;
-    font: 100% $font-open-sans;
-    font-weight: 400;
-    font-size: 16px;
     line-height: 22px;
     text-align: center;
-    color: $color-white;
   }
 
   &__counter-food {
@@ -292,20 +289,16 @@ $font-inter: "Inter", "Arial", sans-serif;
 
   &__counter-number {
     color: $color-yellow;
-    font: 100% $font-open-sans;
-    font-weight: 400;
     font-size: 40px;
     line-height: 55px;
     margin: 0;
+    text-align: center;
   }
 
   &__counret-text {
-    color: $color-white;
-    font: 100% $font-open-sans;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 28px;
+    @extend %subtext-properties;
     margin: 2px 0 0;
+    text-align: center;
   }
 
   &__image {
@@ -331,9 +324,7 @@ $font-inter: "Inter", "Arial", sans-serif;
   }
 
   &__title {
-    font: 100% $font-tinos;
-    font-weight: 400;
-    font-size: 52px;
+    @extend %title-properties;
     line-height: 60px;
     color: $color-yellow;
     margin: 0;
@@ -341,21 +332,17 @@ $font-inter: "Inter", "Arial", sans-serif;
 
   &__text {
     margin: 20px 0 0;
-    font: 100% $font-open-sans;
     font-weight: 700;
     font-size: 24px;
     line-height: 33px;
-    color: $color-white;
   }
 
   &__btn {
     background-color: $color-yellow;
     max-width: 141px;
     height: 36px;
-    color: $color-white;
     border-radius: 120px;
     text-transform: uppercase;
-    font: 100% $font-open-sans;
     font-weight: 700;
     font-size: 14px;
     line-height: 19px;
@@ -368,10 +355,7 @@ $font-inter: "Inter", "Arial", sans-serif;
   padding: 88px 0 96px;
 
   &__title {
-    font: 100% $font-tinos;
-    font-weight: 400;
-    font-size: 54px;
-    line-height: 62px;
+    @extend %title-properties;
     color: $color-yellow;
     text-align: center;
     margin: 0;
@@ -438,7 +422,6 @@ $font-inter: "Inter", "Arial", sans-serif;
 
   &__card-title {
     font: 100% $font-tinos;
-    font-weight: 400;
     font-size: 20px;
     line-height: 26px;
     color: $color-yellow;
@@ -447,25 +430,22 @@ $font-inter: "Inter", "Arial", sans-serif;
 
   &__card_text {
     font: 100% $font-tinos;
-    font-weight: 400;
     font-size: 15px;
     line-height: 26px;
-    color: $color-white;
     margin: 9px 0 0 150px;
   }
 
   &__btn {
-    font: 100% $font-open-sans;
     font-weight: 700;
     font-size: 14px;
     line-height: 19px;
-    color: $color-white;
     background-color: $color-yellow;
     border-radius: 120px;
     max-width: 188px;
     height: 36px;
     margin: 45px 0 0;
     text-transform: uppercase;
+    cursor: pointer;
   }
 }
 
@@ -476,27 +456,6 @@ $font-inter: "Inter", "Arial", sans-serif;
   height: 100%;
 }
 
-.swiper-slide {
-}
-
-.swiper-pagination-bullet {
-  width: 5px;
-  height: 5px;
-  background-color: $color-white;
-  border-radius: 50%;
-  opacity: 1;
-}
-
-
-.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullet {
-  margin: 0 2px;
-}
-
-.swiper-pagination-bullet-active {
-  height: 6px;
-  background-color: #000;
-}
-
 .visitor-card {
   display: flex;
   flex-direction: column;
@@ -505,13 +464,9 @@ $font-inter: "Inter", "Arial", sans-serif;
   margin: 0 auto;
 
   &__text {
-    font: 100% $font-open-sans;
-    font-weight: 400;
     font-style: italic;
-    font-size: 20px;
-    line-height: 28px;
+    @extend %subtext-properties;
     text-align: center;
-    color: $color-white;
     margin: 0;
   }
 
@@ -524,20 +479,13 @@ $font-inter: "Inter", "Arial", sans-serif;
   }
 
   &__status {
-    font: 100% $font-open-sans;
     font-weight: 600;
-    font-size: 20px;
-    line-height: 28px;
-    color: $color-white;
+    @extend %subtext-properties;
     margin: 7px 0 0 0;
   }
 
   &__name {
-    font: 100% $font-open-sans;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 28px;
-    color: $color-white;
+    @extend %subtext-properties;
     margin: 10px 0 0;
     padding-bottom: 40px;
   }
@@ -547,11 +495,7 @@ $font-inter: "Inter", "Arial", sans-serif;
   padding: 21px 0;
 
   &__title {
-    font: 100% $font-tinos;
-    color: $color-white;
-    font-weight: 400;
-    font-size: 54px;
-    line-height: 62px;
+    @extend %title-properties;
     text-align: center;
     margin: 0;
   }
@@ -614,11 +558,7 @@ $font-inter: "Inter", "Arial", sans-serif;
   padding: 63px 0 33px;
 
   &__title {
-      font: 100% $font-tinos;
-      font-weight: 400;
-      font-size: 54px;
-      line-height: 62px;
-      color: $color-white;
+      @extend %title-properties;
       margin: 0;
       text-align: center;
   }
@@ -655,10 +595,6 @@ $font-inter: "Inter", "Arial", sans-serif;
 
   &__description {
     font: 100% $font-inter;
-    color: $color-white;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 29px;
     margin: 15px 0 0;
   }
 
@@ -667,7 +603,6 @@ $font-inter: "Inter", "Arial", sans-serif;
     font-weight: 700;
     font-size: 12px;
     line-height: 40px;
-    color: $color-white;
     margin: 0;
   }
 
@@ -677,8 +612,6 @@ $font-inter: "Inter", "Arial", sans-serif;
 
   &__nav-item {
     font: 100% $font-inter;
-    font-weight: 400;
-    font-size: 16px;
     line-height: 40px;
   }
 
@@ -695,7 +628,6 @@ $font-inter: "Inter", "Arial", sans-serif;
     font-weight: 700;
     font-size: 12px;
     line-height: 40px;
-    color: $color-white;
     margin: 0;
   }
 
@@ -706,8 +638,6 @@ $font-inter: "Inter", "Arial", sans-serif;
 
   &__menu-item {
     font: 100% $font-inter;
-    font-weight: 400;
-    font-size: 16px;
     line-height: 40px;
   }
 
@@ -724,7 +654,6 @@ $font-inter: "Inter", "Arial", sans-serif;
     font-weight: 700;
     font-size: 12px;
     line-height: 40px;
-    color: $color-white;
     margin: 0;
   }
 
@@ -735,11 +664,8 @@ $font-inter: "Inter", "Arial", sans-serif;
 
   &__days-text {
     font: 100% $font-inter;
-    font-weight: 400;
-    font-size: 16px;
     line-height: 40px;
     margin: 0;
-    color: $color-white;
     max-width: 150px;
   }
 
@@ -751,10 +677,6 @@ $font-inter: "Inter", "Arial", sans-serif;
 
   &__copy-text {
     font: 100% $font-inter;
-    color: $color-white;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 29px;
   }
 
   &__privacy {
@@ -764,11 +686,5 @@ $font-inter: "Inter", "Arial", sans-serif;
 
   &__privacy-text {
     font: 100% $font-inter;
-    color: $color-white;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 29px;
   }
 }
-
-
