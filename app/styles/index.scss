@@ -594,3 +594,29 @@ $font-tinos: "Tinos", "Arial", sans-serif;
     max-width: 540px;
   }
 }
+
+.cooks {
+  margin: 0 auto;
+  padding: 63px 0 33px;
+
+  &__title {
+      font: 100% $font-tinos;
+      font-weight: 400;
+      font-size: 54px;
+      line-height: 62px;
+      color: $color-white;
+      margin: 0;
+      text-align: center;
+  }
+
+  &__title_type_yellow {
+    color: $color-yellow;
+  }
+
+  &__photos {
+    display: flex;
+    justify-content: center;
+    gap: 57px;
+    margin: 77px 0 0;
+  }
+}
