@@ -73,6 +73,25 @@ $font-inter: "Inter", "Arial", sans-serif;
     align-items: center;
   }
 
+  &__menu-btn {
+    width: 30px;
+    height: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    display: none;
+  }
+
+  &__menu-line {
+    height: 2px;
+    background-color: $color-yellow;
+    border-radius: 50px;
+    width: 100%;
+  }
+
   &__menu-list {
     display: flex;
     gap: 38px;
@@ -256,6 +275,7 @@ $font-inter: "Inter", "Arial", sans-serif;
   &__wrapper {
     display: flex;
     justify-content: space-between;
+    gap: 50px;
   }
 
   &__text-wrapper {
@@ -377,6 +397,12 @@ $font-inter: "Inter", "Arial", sans-serif;
       "img3 img4";
   }
 
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   &__image1 {
     grid-area: img1;
   }
@@ -428,7 +454,7 @@ $font-inter: "Inter", "Arial", sans-serif;
     margin: 0 0 0 150px;
   }
 
-  &__card_text {
+  &__card-text {
     font: 100% $font-tinos;
     font-size: 15px;
     line-height: 26px;
@@ -686,5 +712,207 @@ $font-inter: "Inter", "Arial", sans-serif;
 
   &__privacy-text {
     font: 100% $font-inter;
+  }
+}
+
+@media (max-width: 1180px) {
+  .header__button-order {
+    display: none;
+  }
+
+  .intro__cards-items {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .dishes {
+    &__wrapper {
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .header__order {
+    display: none;
+  }
+
+  .top {
+    min-height: 900px;
+
+    &__wrapper-text {
+      margin: 0 auto;
+    }
+
+    &__title {
+      color: $color-white;
+    }
+
+    &__subtitle {
+      color: $color-white;
+    }
+  }
+
+  .our-story__wrapper{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .order {
+    &__wrapper {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+
+    &__btn {
+      margin-top: 20px;
+    }
+  }
+  }
+
+@media (max-width: 860px) {
+  .header {
+    &__menu-btn {
+      display: flex;
+      position: relative;
+      z-index: 3;
+    }
+
+    &__logo {
+      position: relative;
+      z-index: 3;
+    }
+
+    &__menu-list {
+      position: absolute;
+      background-color: $color-black;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      flex-direction: column;
+      z-index: 2;
+      align-items: center;
+      height: 100vh;
+      padding-top: 150px;
+      transform: translateY(-100%);
+      transition: transform .3s ease;
+      gap: 25px;
+    }
+  }
+
+  .header__menu-list.header__menu-list_active {
+    transform: translateY(0%);
+  }
+
+  .top {
+    min-height: 750px;
+  }
+}
+
+@media (max-width: 680px) {
+  .top {
+    min-height: 650px;
+
+    &__subtitle {
+      font-size: 30px;
+      line-height: 35px;
+    }
+
+    &__title {
+      font-size: 40px;
+      line-height: 46px;
+    }
+
+    &__title-description {
+      margin-top: 17px;
+    }
+
+    &__text-line {
+      width: 30px;
+    }
+  }
+
+  .intro__cards-items {
+    gap: 15px;
+  }
+
+  .order {
+    &__title {
+      font-size: 40px;
+      line-height: 46px;
+    }
+
+    &__text {
+      font-size: 35px;
+      line-height: 48px;
+    }
+  }
+
+  .dishes {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    &__wrapper {
+      margin-top: 24px;
+    }
+
+    &__card {
+      padding: 14px 5px 20px;
+    }
+
+    &__card-img {
+      max-width: 180px;
+      left: -10px;
+    }
+
+    &__card-title {
+      margin-left: 160px;
+      font-size: 16px;
+    }
+
+    &__card-text {
+      margin-left: 160px;
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .top {
+    min-height: 550px;
+  }
+
+  .our-story {
+    padding-top: 10px;
+    padding-bottom: 55px;
+
+    &__counter-food {
+      margin-top: 58px;
+      flex-direction: column;
+      gap: 58px;
+    }
+
+    &__image {
+      gap: 58px;
+    }
+
+    &__title {
+      font-size: 45px;
+    }
+
+    &__title_type_yellow {
+      font-size: 45px;
+    }
+  }
+
+  .order {
+    padding-top: 40px;
+    padding-bottom: 58px;
   }
 }
