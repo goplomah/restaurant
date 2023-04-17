@@ -81,6 +81,7 @@
                 <h2 class="top__subtitle">Добро пожаловать в</h2>
             <h1 class="top__title">Наш ресторан</h1>
             <p class="top__title-descrition"><span class="top__text-line"></span> ДОМ ЛУЧШЕЙ ЕДЫ <span class="top__text-line"></p>
+            <button class="top__btn">меню</button>
             </div>
         </section>
         <section class="intro">
@@ -217,8 +218,8 @@
         <section class="gallery">
                 <h2 class="gallery__title">Галерея <span class="gallery__title_type_yellow">Блюд</span></h2>
             <div class="gallery__images">
-                <img src="<%=require('./images/gallery__item-1.jpg')%>" alt="котелок с супом." class="gallery__item-1 gallery__item">
-                <img src="<%=require('./images/gallery__item-2.jpg')%>" alt="спагетти с морепродуктамию" class="gallery__item-2 gallery__item">
+                <img src="<%=require('./images/gallery__item-1.jpg')%>" alt="котелок с супом." class="gallery__item gallery__item-1">
+                <img src="<%=require('./images/gallery__item-2.jpg')%>" alt="спагетти с морепродуктамию" class="gallery__item gallery__item-2">
                 <img src="<%=require('./images/gallery__item-3.jpg')%>" alt="овощное рагу." class="gallery__item-3 gallery__item">
                 <img src="<%=require('./images/gallery__item-4.jpg')%>" alt="чашка кофе." class="gallery__item-4 gallery__item">
                 <img src="<%=require('./images/gallery__item-5.jpg')%>" alt="пицца." class="gallery__item-5 gallery__item">
@@ -245,6 +246,23 @@
                     <p class="footer__description">
                         Наш ресторан ждет вас, обслуживание и еда на самом высоком уровне, потому что вы этого заслуживаете
                     </p>
+                    <div class="footer__job-time">
+                        <h2 class="footer__job-time-title">Время работы</h2>
+                        <div class="footer__days">
+                            <p class="footer__days-text">
+                                Пн - Пт
+    8:00&nbsp;am&nbsp;to&nbsp;9:00 pm
+                            </p>
+                            <p class="footer__days-text">
+                                Суббота
+    8:00&nbsp;am&nbsp;to 9:00 pm
+                            </p>
+                            <p class="footer__days-text">
+                                Воскресенье
+    Закрыто
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 <nav class="footer__nav">
                     <h2 class="footer__nav-title">Навигация</h2>
@@ -263,23 +281,6 @@
                         <li class="footer__menu-item"><a href="#" class="footer__menu-link">Яичница с огурцом</a></li>
                         <li class="footer__menu-item"><a href="#" class="footer__menu-link">Остальные блюда</a></li>
                     </ul>
-                </div>
-                <div class="footer__job-time">
-                    <h2 class="footer__job-time-title">Время работы</h2>
-                    <div class="footer__days">
-                        <p class="footer__days-text">
-                            Пн - Пт
-8:00&nbsp;am&nbsp;to&nbsp;9:00 pm
-                        </p>
-                        <p class="footer__days-text">
-                            Суббота
-8:00&nbsp;am&nbsp;to 9:00 pm
-                        </p>
-                        <p class="footer__days-text">
-                            Воскресенье
-Закрыто
-                        </p>
-                    </div>
                 </div>
             </div>
             <div class="footer__copy">

@@ -184,6 +184,7 @@ $font-inter: "Inter", "Arial", sans-serif;
     flex-direction: column;
     margin: 0 0 0 207px;
     justify-content: center;
+    align-items: center;
   }
 
   &__subtitle {
@@ -219,6 +220,18 @@ $font-inter: "Inter", "Arial", sans-serif;
     height: 2px;
     width: 62px;
     background-color: $color-grey;
+  }
+
+  &__btn {
+    text-transform: uppercase;
+    background-color: $color-yellow;
+    border-radius: 120px;
+    width: 134px;
+    height: 36px;
+    color: $color-white;
+    margin-top: 68px;
+    display: none;
+    cursor: pointer;
   }
 }
 
@@ -477,7 +490,6 @@ $font-inter: "Inter", "Arial", sans-serif;
 
 .slider {
   background-image: url(../images/slider__background.jpg);
-  background-repeat: no-repeat;
   padding: 110px 0 80px;
   height: 100%;
 }
@@ -539,6 +551,7 @@ $font-inter: "Inter", "Arial", sans-serif;
     "item-4 item-5 item-6 item-6"
     ;
     gap: 30px;
+    padding: 0 20px;
   }
 
   &__item {
@@ -596,8 +609,23 @@ $font-inter: "Inter", "Arial", sans-serif;
   &__photos {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 57px;
     margin: 77px 0 0;
+    padding: 0 20px;
+  }
+
+  &__photo {
+    max-width: 374px;
+    width: 100%;
+  }
+}
+
+.restaurant-hall {
+  &__background {
+    width: 100%;
+    min-height: 1050px;
+    object-fit: cover;
   }
 }
 
@@ -606,7 +634,6 @@ $font-inter: "Inter", "Arial", sans-serif;
 
   &__wrapper-items {
     display: flex;
-    flex-wrap: wrap;
     gap: 100px;
   }
 
@@ -675,6 +702,10 @@ $font-inter: "Inter", "Arial", sans-serif;
     opacity: .7;
   }
 
+  &__job-time {
+    margin-top: 21px;
+  }
+
   &__job-time-title {
     font: 100% $font-inter;
     font-weight: 700;
@@ -703,6 +734,7 @@ $font-inter: "Inter", "Arial", sans-serif;
 
   &__copy-text {
     font: 100% $font-inter;
+    margin: 0;
   }
 
   &__privacy {
@@ -712,6 +744,7 @@ $font-inter: "Inter", "Arial", sans-serif;
 
   &__privacy-text {
     font: 100% $font-inter;
+    margin: 0;
   }
 }
 
@@ -730,6 +763,12 @@ $font-inter: "Inter", "Arial", sans-serif;
       flex-direction: column;
       align-items: center;
       gap: 50px;
+    }
+  }
+
+  .cooks {
+    &__photos {
+      gap: 30px;
     }
   }
 }
@@ -772,6 +811,21 @@ $font-inter: "Inter", "Arial", sans-serif;
       margin-top: 20px;
     }
   }
+  .slider {
+    background: #000;
+  }
+
+  .gallery {
+    &__images {
+      gap: 15px;
+    }
+  }
+
+  .footer {
+    &__wrapper-items {
+      gap: 75px;
+    }
+  }
   }
 
 @media (max-width: 860px) {
@@ -811,6 +865,66 @@ $font-inter: "Inter", "Arial", sans-serif;
 
   .top {
     min-height: 750px;
+    
+    &__btn {
+      display: block;
+    }
+  }
+
+  .gallery {
+    &__images {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__item-1, &__item-2, &__item-3, &__item-4, &__item-5, &__item-6 {
+      max-width: 550px;
+    }
+  }
+
+  .cooks {
+    &__photos {
+      gap: 15px;
+    }
+  }
+
+  .footer {
+    padding-top: 45px;
+    padding-bottom: 23px;
+
+    &__wrapper-items {
+      flex-direction: column;  
+      gap: 40px;
+      align-items: center;
+    }
+
+    &__logo-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__description {
+      text-align: center;
+    }
+
+    &__job-time-title {
+      text-align: center;
+    }
+
+    &__nav {
+      text-align: center;
+    }
+
+    &__menu {
+      text-align: center;
+    }
+
+    &__copy {
+      display: none;
+    }
   }
 }
 
@@ -879,6 +993,29 @@ $font-inter: "Inter", "Arial", sans-serif;
       margin-left: 160px;
       font-size: 12px;
       line-height: 20px;
+    }
+  }
+
+  .slider {
+    padding-top: 62px;
+    padding-bottom: 40px;
+  }
+
+  .gallery {
+    &__images {
+      gap: 0;
+    }
+  }
+
+  .footer {
+    &__days {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
+    &__days-text {
+      text-align: center;
     }
   }
 }
