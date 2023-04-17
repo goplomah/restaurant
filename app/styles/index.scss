@@ -258,6 +258,7 @@ $font-inter: "Inter", "Arial", sans-serif;
     align-items: center;
     background-color: #353030;
     padding: 48px 20px 54px;
+    height: 270px;
   }
 
   &__card-img {
@@ -380,6 +381,7 @@ $font-inter: "Inter", "Arial", sans-serif;
     font-size: 14px;
     line-height: 19px;
     cursor: pointer;
+    color: $color-white;
   }
 }
 
@@ -808,7 +810,7 @@ $font-inter: "Inter", "Arial", sans-serif;
   
 
     &__btn {
-      margin-top: 20px;
+      margin-top: 40px;
     }
   }
   .slider {
@@ -1023,6 +1025,12 @@ $font-inter: "Inter", "Arial", sans-serif;
 @media (max-width: 420px) {
   .top {
     min-height: 550px;
+  }
+
+  .intro {
+    &__card-item {
+      text-align: center;
+    }
   }
 
   .our-story {
