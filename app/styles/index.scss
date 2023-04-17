@@ -931,6 +931,12 @@ $font-inter: "Inter", "Arial", sans-serif;
 }
 
 @media (max-width: 680px) {
+  .header {
+    &__inner {
+      padding: 0 20px;
+    }
+  }
+
   .top {
     min-height: 650px;
 
