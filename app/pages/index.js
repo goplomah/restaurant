@@ -8,10 +8,20 @@ import 'swiper/scss/autoplay';
 
 const menuBtn = document.querySelector('.header__menu-btn');
 const menu = document.querySelector('.header__menu-list');
+const buttonToTop = document.querySelector('.to-top');
 
 menuBtn.addEventListener('click', () => {
   menu.classList.toggle("header__menu-list_active");
 });
+
+window.addEventListener('scroll', () => {
+  buttonToTop.classList.toggle('to-top_active', window.scrollY>500)
+})
+  
+  buttonToTop.addEventListener('click', () => {
+    window.scrollTo({top:0, behavior: 'smooth'})
+  })
+
 
 const swiper = new Swiper('.swiper', {
     modules: [Navigation, Pagination, Autoplay],

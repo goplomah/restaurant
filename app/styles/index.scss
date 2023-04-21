@@ -133,6 +133,7 @@ $font-inter: "Inter", "Arial", sans-serif;
     display: flex;
     gap: 9px;
     align-items: flex-start;
+    @extend %a-properties;
   }
 
   &__phone-img {
@@ -166,6 +167,29 @@ $font-inter: "Inter", "Arial", sans-serif;
     cursor: pointer;
     border: none;
     text-transform: uppercase;
+    color: $color-white;
+  }
+}
+
+.to-top {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  cursor: pointer;
+  background-image: url(../images/to-top2.svg);
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  background-color: $color-yellow;
+  border-radius: 50%;
+  border: 5px solid #000;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s;
+  z-index: 5;
+  &_active {
+    visibility: visible;
+    opacity: 1;
   }
 }
 
@@ -227,11 +251,17 @@ $font-inter: "Inter", "Arial", sans-serif;
     background-color: $color-yellow;
     border-radius: 120px;
     width: 134px;
-    height: 36px;
     color: $color-white;
     margin-top: 68px;
     display: none;
     cursor: pointer;
+    @extend %a-properties;
+    font: 100% $font-open-sans;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    padding: 9px;
+    text-align: center;
   }
 }
 
@@ -373,8 +403,7 @@ $font-inter: "Inter", "Arial", sans-serif;
 
   &__btn {
     background-color: $color-yellow;
-    max-width: 141px;
-    height: 36px;
+    padding: 9px;
     border-radius: 120px;
     text-transform: uppercase;
     font-weight: 700;
@@ -483,10 +512,11 @@ $font-inter: "Inter", "Arial", sans-serif;
     background-color: $color-yellow;
     border-radius: 120px;
     max-width: 188px;
-    height: 36px;
+    padding: 9px;
     margin: 45px 0 0;
     text-transform: uppercase;
     cursor: pointer;
+    color: $color-white;
   }
 }
 
